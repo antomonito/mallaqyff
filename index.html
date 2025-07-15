@@ -1,1 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Curricular Interactiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla Curricular - Química y Farmacia</h1>
+  <button onclick="reiniciar()">🔁 Reiniciar todo</button>
+  <div class="semestres-container">
 
+    <div class="semestre">
+      <h2>Semestre 1</h2>
+      <div class="ramo" data-nombre="Cálculo" data-prereqs="">
+        Cálculo <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Anatomía" data-prereqs="">
+        Anatomía <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Introducción a la farmacia I" data-prereqs="">
+        Introducción a la farmacia I <span>(4 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Química General I" data-prereqs="">
+        Química General I <span>(7 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Introducción al método científico" data-prereqs="">
+        Introducción al método científico <span>(3 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+    </div>
+
+    <div class="semestre">
+      <h2>Semestre 2</h2>
+      <div class="ramo" data-nombre="Fisicoquímica" data-prereqs="Cálculo">
+        Fisicoquímica <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Biología" data-prereqs="Anatomía">
+        Biología <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Introducción a la farmacia II" data-prereqs="Introducción a la farmacia I">
+        Introducción a la farmacia II <span>(4 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Química General II" data-prereqs="Química General I">
+        Química General II <span>(7 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Biofísica" data-prereqs="Introducción al método científico">
+        Biofísica <span>(3 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+    </div>
+
+    <div class="semestre">
+      <h2>Semestre 3</h2>
+      <div class="ramo" data-nombre="Bioquímica" data-prereqs="Biología">
+        Bioquímica <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Fisiopatología I" data-prereqs="Biología">
+        Fisiopatología I <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Comunicación y desarrollo personal" data-prereqs="">
+        Comunicación y desarrollo personal <span>(2 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Química Orgánica I" data-prereqs="Química General II">
+        Química Orgánica I <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Formación General (Electiva)" data-prereqs="">
+        Formación General (Electiva) <span>(4 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 4</h2>
+      <div class="ramo" data-nombre="Química Funcional" data-prereqs="Química Orgánica I">
+        Química Funcional <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Análisis Farmacéutico Instrumental" data-prereqs="Fisicoquímica">
+        Análisis Farmacéutico Instrumental <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Química Orgánica II" data-prereqs="Química Orgánica I">
+        Química Orgánica II <span>(7 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Inmunología" data-prereqs="Bioquímica">
+        Inmunología <span>(3 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Taller de Literatura Científica" data-prereqs="">
+        Taller de Literatura Científica <span>(2 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+    </div>
+
+    <div class="semestre">
+      <h2>Semestre 5</h2>
+      <div class="ramo" data-nombre="Bioestadística" data-prereqs="">
+        Bioestadística <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Tecnología Farmacéutica I" data-prereqs="Análisis Farmacéutico Instrumental">
+        Tecnología Farmacéutica I <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Química Farmacéutica I" data-prereqs="Química Funcional">
+        Química Farmacéutica I <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Farmacología I" data-prereqs="Fisiopatología I">
+        Farmacología I <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Farmacoquímica I" data-prereqs="Química Orgánica II">
+        Farmacoquímica I <span>(4 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Farmacocinética" data-prereqs="Bioestadística,Farmacología I">
+        Farmacocinética <span>(3 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+    </div>
+
+    <div class="semestre">
+      <h2>Semestre 6</h2>
+      <div class="ramo" data-nombre="Tecnología Farmacéutica II" data-prereqs="Tecnología Farmacéutica I">
+        Tecnología Farmacéutica II <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Toxicología" data-prereqs="Farmacología I">
+        Toxicología <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Química Farmacéutica II" data-prereqs="Química Farmacéutica I">
+        Química Farmacéutica II <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Farmacología II" data-prereqs="Farmacología I">
+        Farmacología II <span>(3 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Biofarmacia" data-prereqs="Farmacocinética">
+        Biofarmacia <span>(4 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Electivo Profesional" data-prereqs="">
+        Electivo Profesional <span>(3 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+    </div>
+       <div class="semestre">
+      <h2>Semestre 7</h2>
+      <div class="ramo" data-nombre="Química Farmacéutica Orgánica" data-prereqs="Química Orgánica II">
+        Química Farmacéutica Orgánica <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Farmacognosia" data-prereqs="Farmacología II">
+        Farmacognosia <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Unidad de Atención Farmacéutica Asistencial" data-prereqs="Farmacología II">
+        Unidad de Atención Farmacéutica Asistencial <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Farmacoquímica II" data-prereqs="Farmacoquímica I">
+        Farmacoquímica II <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Legislación Farmacéutica" data-prereqs="">
+        Legislación Farmacéutica <span>(3 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+    </div>
+
+    <div class="semestre">
+      <h2>Semestre 8</h2>
+      <div class="ramo" data-nombre="Farmacia Clínica" data-prereqs="Unidad de Atención Farmacéutica Asistencial">
+        Farmacia Clínica <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Microbiología" data-prereqs="Inmunología">
+        Microbiología <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Unidad de Investigación I" data-prereqs="">
+        Unidad de Investigación I <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Integrador II: Taller Control y Calidad de Medicamentos" data-prereqs="Química Farmacéutica II">
+        Integrador II: Taller Control y Calidad de Medicamentos <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Administración y gestión en farmacia" data-prereqs="">
+        Administración y gestión en farmacia <span>(3 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+    </div>
+
+    <div class="semestre">
+      <h2>Semestre 9</h2>
+      <div class="ramo" data-nombre="Unidad de Atención Farmacéutica Asistencial II" data-prereqs="Unidad de Atención Farmacéutica Asistencial">
+        Unidad de Atención Farmacéutica Asistencial II <span>(7 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Farmacia Asistencial" data-prereqs="Farmacia Clínica">
+        Farmacia Asistencial <span>(6 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Integrador III: Taller de Atención Farmacéutica" data-prereqs="Farmacia Clínica">
+        Integrador III: Taller de Atención Farmacéutica <span>(5 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Ética y Moral Profesional" data-prereqs="">
+        Ética y Moral Profesional <span>(2 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+      <div class="ramo" data-nombre="Electivo de Formación Profesional" data-prereqs="">
+        Electivo de Formación Profesional <span>(4 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+    </div>
+
+    <div class="semestre">
+      <h2>Semestre 10</h2>
+      <div class="ramo" data-nombre="Internado Farmacia Clínica" data-prereqs="Farmacia Asistencial,Integrador III: Taller de Atención Farmacéutica">
+        Internado Farmacia Clínica <span>(24 cr)</span><button onclick="aprobar(this)">✅ Aprobado</button>
+      </div>
+    </div>
+
+  </div>
+  <script>
+    // script.js integrado directamente en el HTML
+    document.addEventListener("DOMContentLoaded", function () {
+      const ramos = document.querySelectorAll(".ramo");
+
+      ramos.forEach(ramo => {
+        const prereqs = ramo.dataset.prereqs.split(",").filter(p => p.trim() !== "");
+        if (prereqs.length > 0) {
+          ramo.classList.add("bloqueado");
+          ramo.querySelector("button").disabled = true;
+        }
+      });
+
+      window.aprobar = function (btn) {
+        const ramo = btn.parentElement;
+        const nombre = ramo.dataset.nombre;
+        localStorage.setItem("aprobado_" + nombre, "true");
+        ramo.classList.remove("bloqueado");
+        ramo.classList.add("aprobado");
+        btn.disabled = true;
+        desbloquearRamos();
+      };
+
+      window.reiniciar = function () {
+        ramos.forEach(ramo => {
+          const nombre = ramo.dataset.nombre;
+          localStorage.removeItem("aprobado_" + nombre);
+        });
+        location.reload();
+      };
+
+      function desbloquearRamos() {
+        ramos.forEach(ramo => {
+          if (!ramo.classList.contains("aprobado")) {
+            const prereqs = ramo.dataset.prereqs.split(",").filter(p => p.trim() !== "");
+            const cumplidos = prereqs.every(p => localStorage.getItem("aprobado_" + p) === "true");
+            if (cumplidos && prereqs.length > 0) {
+              ramo.classList.remove("bloqueado");
+              ramo.querySelector("button").disabled = false;
+            }
+          }
+        });
+      }
+
+      ramos.forEach(ramo => {
+        const nombre = ramo.dataset.nombre;
+        if (localStorage.getItem("aprobado_" + nombre) === "true") {
+          ramo.classList.add("aprobado");
+          ramo.querySelector("button").disabled = true;
+        }
+      });
+
+      desbloquearRamos();
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #005f73;
+    }
+
+    button {
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .semestres-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .semestre {
+      background: #ffffff;
+      border: 1px solid #d0d7de;
+      border-radius: 8px;
+      padding: 15px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    }
+
+    .semestre h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #023047;
+      text-align: center;
+    }
+
+    .ramo {
+      margin: 10px 0;
+      padding: 10px;
+      background: #e0f2fe;
+      border-left: 5px solid #0288d1;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .ramo span {
+      font-weight: normal;
+      color: #555;
+      display: block;
+      font-size: 14px;
+    }
+
+    .ramo button {
+      margin-top: 5px;
+      font-size: 12px;
+      padding: 4px 6px;
+    }
+
+    .ramo.bloqueado {
+      background: #f1f1f1;
+      color: #aaa;
+      border-left: 5px solid #ccc;
+    }
+
+    .ramo.bloqueado button {
+      cursor: not-allowed;
+    }
+
+    .ramo.aprobado {
+      background: #d2f8d2;
+      border-left: 5px solid #2e7d32;
+    }
+  </style>
+</body>
+</html> 
